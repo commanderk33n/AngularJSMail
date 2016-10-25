@@ -4,13 +4,11 @@
   padding: 0;
 }
 body {
-  font: 300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.wrapper {
-  margin: 0 auto;
-  max-width: 800px;
-  width: 96%;
-}
+
 ul,
 ol {
   list-style: none;
@@ -21,15 +19,78 @@ ol {
  */
 .header {
   padding: 25px 0;
-  background: #f5f5f5;
-  border-bottom: 1px solid #ddd;
+  background: #192124;
   margin: 0 0 10px;
+  color: #D5DDE0;
+  text-align: center;
+  margin-bottom: 0;
 }
+
+.header::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #333948;
+  display: block;
+  border-radius: 100%;
+  box-shadow: 25px 0 0 #333948, 50px 0 0 #333948;
+  margin-left: 15px;
+  position: absolute;
+  top: 25px;
+}
+
+@media screen and (max-width: 640px) {
+  .header::before {
+    display: none;
+  }
+}
+
+.header p {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.header p a {
+  text-decoration: none;
+  color: #D5DDE0;
+  border-bottom: 1px solid #D5DDE0;
+}
+
 .header__text {
   font-weight: 900;
 }
 .header__text img {
   width: 150px;
+}
+
+.module.inbox-view {
+  background-color: #313744;
+  color: #D5DDE0;
+  left: 0;
+  width: 30%;
+  padding: 25px;
+}
+
+.module.inbox-view h1 {
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.module.directive {
+  background-color: #F6F5F3;
+  color: #44424C;
+  right: 0;
+  width: 100%;
+}
+
+.module.directive .email {
+  padding: 25px;
+}
+
+.flex {
+  display: flex;
+  align-items: stretch;
+  min-height: 1000px;
 }
 
 /**
@@ -51,6 +112,13 @@ ol {
 .inbox__count {
   margin: 0 0 10px 0;
 }
+
+.search-bar {
+  background-color: #E3E1E2;
+  height: 105px;
+  padding: 25px;
+}
+
 .inbox__search {
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -63,8 +131,24 @@ ol {
   outline: 0;
   border-color: #aaa;
 }
+
+.inbox__list-info {
+  display: inline-block;
+  left: 0;
+  width: 80%;
+  padding-left: 25px;
+}
+
+.inbox__list-date {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
 .inbox__list-actions {
   margin: 10px 0 0;
+  display: inline-block;
+  right: 0;
+  margin-left: 25px;
 }
 .inbox__list-subject {
   font-weight: 900;
@@ -82,6 +166,10 @@ ol {
 }
 .inbox__list-actions a:hover {
   background: #a6120d;
+}
+
+li.no-emails {
+  padding: 25px;
 }
 
 /**
@@ -134,4 +222,10 @@ ol {
 }
 .email__response-text:focus {
   border-color: #aaa;
+}
+
+@media screen and (max-width: 840px) {
+  .module.inbox-view {
+    display: none;
+  }
 }

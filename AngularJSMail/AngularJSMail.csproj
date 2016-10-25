@@ -99,16 +99,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="app\directives\inbox.js" />
+    <Content Include="app\controllers\EmailCtrl.js" />
+    <Content Include="app\directives\email.tmpl.html" />
+    <Content Include="app\directives\EmailDrctv.js" />
+    <Content Include="app\directives\InboxDrctv.js" />
     <Content Include="app\directives\inbox.tmpl.html" />
+    <Content Include="app\factories\EmailFactory.js" />
     <Content Include="app\factories\InboxFactory.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="scripts\angular-sanitize.js" />
+    <Content Include="scripts\angular-sanitize.min.js" />
     <Content Include="scripts\angular.min.js.map" />
     <Content Include="scripts\angular-route.min.js.map" />
     <Content Include="json\emails.json" />
+    <Content Include="scripts\angular-sanitize.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -118,7 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\controllers\inbox.js" />
+    <Content Include="app\controllers\InboxCtrl.js" />
     <Content Include="css\style.css" />
     <Content Include="index.html" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
@@ -129,6 +136,7 @@
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\jquery.min.js" />
+    <Content Include="views\email.html" />
     <Content Include="views\inbox.html" />
     <Content Include="Web.config" />
   </ItemGroup>

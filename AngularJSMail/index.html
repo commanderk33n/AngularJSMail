@@ -4,23 +4,37 @@
     <meta charset="utf-8">
     <title>AngularJS Email App</title>
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
+    <header class="header" role="banner">
+        <div class="header__text">
+            <p>Angular Mail by <a href="http://www.thinkful.com/learn/angularjs-tutorial-build-a-gmail-clone/">THIS GUIDE</a></p>
+        </div>
+    </header>
 
     <main class="main" role="main">
-        <div class="wrapper">
-            <div ng-view></div>
-        </div>
+        <div ng-view class="flex"></div>
     </main>
+
 
     <!-- Vendor libraries -->
     <script src="scripts/jquery.min.js"></script>
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/angular-sanitize.min.js"></script>
     <!-- Application Files -->
     <script src="app/app.js"></script>
-    <script src="app/controllers/inbox.js"></script>
+    <script src="app/controllers/InboxCtrl.js"></script>
+    <script src="app/controllers/EmailCtrl.js"></script>
     <script src="app/factories/InboxFactory.js"></script>
-    <script src="app/directives/inbox.js"></script>
+    <script src="app/factories/EmailFactory.js"></script>
+    <script src="app/directives/InboxDrctv.js"></script>
+    <script src="app/directives/EmailDrctv.js"></script>
 </body>
 </html>
