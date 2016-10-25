@@ -99,6 +99,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="app\directives\inbox.js" />
+    <Content Include="app\directives\inbox.tmpl.html" />
     <Content Include="app\factories\InboxFactory.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
